@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    
+    <div class="buttons">
+        <p id="result"></p>
+        <input type="text" class="input" id="input" placeholder="0">
+        <button class="cl" onclick="Clear()">CLEAR</button>
+        <button class="btn" onclick="Display('1')">1</button>
+        <button class="btn" onclick="Display('2')">2</button>
+        <button class="btn" onclick="Display('3')">3</button>
+        <button class="btn" onclick="Display('4')">4</button>
+        <button class="btn" onclick="Display('5')">5</button>
+        <button class="btn" onclick="Display('6')">6</button>
+        <button class="btn" onclick="Display('7')">7</button>
+        <button class="btn" onclick="Display('8')">8</button>
+        <button class="btn" onclick="Display('9')">9</button>
+        <button class="btn" onclick="Display('0')">0</button>
+        
+        <button id="moveUpBtn" class="move">MOVE UP</button>
+        <button id="moveDownBtn" class="move">MOVE DOWN</button>
+        <button type="button" class="go" id="goBtn">GO</button>
+
+    </div>
+</div>
+    <div>
+        <svg id="q1">
+            <!-- vertical lines -->
+            <line id="line" x1="250" y1="0" x2="250" y2="500"/>
+            <line id="line" x1="300" y1="0" x2="300" y2="500"/>
+            <line id="line" x1="350" y1="0" x2="350" y2="500"/>
+            <line id="line" x1="400" y1="0" x2="400" y2="500"/>
+            <line id="line" x1="450" y1="0" x2="450" y2="500"/>
+
+            <!-- horizontal lines -->
+            <line id="line" x1="0" y1="50" x2="250" y2="50"/>
+            <line id="line" x1="0" y1="100" x2="250" y2="100"/>
+            <line id="line" x1="0" y1="150" x2="250" y2="150"/>
+            <line id="line" x1="0" y1="200" x2="500" y2="200"/>
+            <line id="line" x1="0" y1="250" x2="500" y2="250"/>
+            <line id="line" x1="0" y1="300" x2="500" y2="300"/>
+            <line id="line" x1="0" y1="350" x2="500" y2="350"/>
+            <line id="line" x1="0" y1="400" x2="500" y2="400"/>
+            <line id="line" x1="0" y1="450" x2="500" y2="450"/>
+
+            <!-- rectangle building -->
+            <rect x="250" y="0" height="500" width="200" style="stroke: #2b1919; fill: #0e0d0d;"/>
+            <!-- text building -->
+            <text x="260" y="240" fill="#fff" class="text">Building</text>
+            <!-- vertical line -->
+            <line x1="200" y1="0" x2="200" y2="500" style="stroke: #2b1919;"/>
+            <!-- 300 px horizontal lines -->
+            <line x1="200" y1="50" x2="500" y2="50" style="stroke: #968d8d;"/>
+            <line x1="200" y1="100" x2="500" y2="100" style="stroke: #968d8d;"/>
+            <line x1="200" y1="150" x2="500" y2="150" style="stroke: #968d8d;"/>
+            <line x1="200" y1="200" x2="500" y2="200" style="stroke: #968d8d;"/>
+            <line x1="200" y1="250" x2="500" y2="250" style="stroke: #968d8d;"/>
+            <line x1="200" y1="300" x2="500" y2="300" style="stroke: #968d8d;"/>
+            <line x1="200" y1="350" x2="500" y2="350" style="stroke: #968d8d;"/>
+            <line x1="200" y1="400" x2="500" y2="400" style="stroke: #968d8d;"/>
+            <line x1="200" y1="450" x2="500" y2="450" style="stroke: #968d8d;"/>
+
+            <defs>
+                <g id="liftAndText">
+                    <!-- lift -->
+                    <rect id="lift" height="50" width="50" style="stroke: #2b1919;fill: #75139e;"/>
+                    <!-- text -->
+                    <text id="floor" x="2" y="20" fill="#fff">1</text>
+                </g>
+            </defs>
+            <use id="usedLiftAndText" xlink:href="#liftAndText" x="200" y="450"></use>
+        </svg>
+
+        <script src="script.js"></script>
+
+    
+</body>
+</html>
